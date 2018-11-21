@@ -5,9 +5,14 @@
     border-radius: 5px;
 }
 
+
+
 .home-card {
-    margin: 33px 15px;
-    width: 45%
+  // display: inline;
+    margin: 13px 2%;
+    width: 46%;
+
+
     // height: 170px;
     // width: 240px;
     // box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
@@ -17,6 +22,10 @@
 .bodier {
     padding: 56px 0 0px;
     box-sizing: border-box;
+    .flex-box{
+      display: flex;
+      flex-wrap:wrap;
+    }
 }
 
 .appbar {
@@ -73,12 +82,16 @@
         </mu-drawer>
     </div>
     <div class="bodier">
+      <div class="flex-box">
+
+
         <div class="home-card" v-for="item in anima">
             <mu-card raised style="width: 100%; max-width: 375px; margin: 0 auto;">
                 <!-- <mu-card-header title="Myron Avatar" sub-title="sub title">
 
                 </mu-card-header> -->
-                <mu-card-media title="Image Title" sub-title="Image Sub Title">
+                <mu-card-media  :title="item.subject.name_cn" sub-title="Image Sub Title">
+
                     <img :src="item.subject.images.large">
                 </mu-card-media>
                 <mu-card-title title="Content Title" sub-title="Content Title"></mu-card-title>
@@ -86,7 +99,7 @@
 
             </mu-card>
         </div>
-
+</div>
     </div>
 
 
