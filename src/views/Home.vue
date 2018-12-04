@@ -32,6 +32,11 @@
     z-index: 99;
 }
 
+.mu-card-title{
+  font-size: 1.0em
+}
+
+
 </style>
 
 <template>
@@ -82,10 +87,10 @@
                     <!-- <mu-card-header title="Myron Avatar" sub-title="sub title">
 
                 </mu-card-header>-->
-                    <mu-card-media :title="item.subject.name_cn" sub-title="Image Sub Title">
+                    <mu-card-media :title="item.subject.name_cn" :sub-title="item.name">
                         <img :src="item.subject.images.large">
                     </mu-card-media>
-                    <mu-card-title title="Content Title" sub-title="Content Title"></mu-card-title>
+                    <mu-card-title  :sub-title="item.subject.name"></mu-card-title>
                 </mu-card>
             </div>
         </div>
@@ -94,7 +99,7 @@
 
 </template>
 
-<script lang="ts">
+<script>
 
 export default {
     data() {
@@ -125,7 +130,7 @@ export default {
                         let annimaComplete = response.data[0].collects[0].list;
 
                         this.anima = annimaComplete;
-                        // console.log(this.annima);
+                        console.log(this.anima);
                     }.bind(this)
                 )
                 .catch(function(error) {
