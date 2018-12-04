@@ -32,8 +32,10 @@
     z-index: 99;
 }
 
-.mu-card-title{
-  font-size: 1.0em
+.mu-card-media-title .mu-card-title {
+    font-size: 16px;
+    color: hsla(0,0%,100%,0.92);
+    line-height: 21px;
 }
 
 
@@ -114,7 +116,10 @@ export default {
         methods: {
             routerAbout() {
                 this.$router.push({
-                    path: "/about"
+                    path: "/about",
+                    query:{
+
+                    }
                 });
             }
         },
