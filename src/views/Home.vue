@@ -140,7 +140,7 @@ export default {
                 )
                 .catch(function(error) {
                     // handle error
-                    alert("主页API炸了qwq");
+                    alert("主页API炸了qwq1");
                 });
 
 
