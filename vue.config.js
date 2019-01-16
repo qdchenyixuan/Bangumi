@@ -1,8 +1,10 @@
 module.exports = {
-  lintOnSave: false, 
+  lintOnSave: false,
+
   // 修改的配置
   // 将baseUrl: '/api',改为baseUrl: '/',
-  baseUrl: '/',
+  baseUrl: '/cyx',
+
   devServer: {
     port: 12345,
     proxy: {
@@ -15,7 +17,19 @@ module.exports = {
         }
       }
     }
-  }  
+  },
+
+  pwa: {
+    name: 'e轩Bangumi',
+    themeColor: '#90a4ae'
+  },
+
+  outputDir: undefined,
+  assetsDir: undefined,
+  runtimeCompiler: undefined,
+  productionSourceMap: undefined,
+  parallel: undefined,
+  css: undefined
 }
 // .env.development
 // VUE_APP_BASE_API = /api
